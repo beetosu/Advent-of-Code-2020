@@ -19,6 +19,11 @@ func main() {
 
 	target := 2020
 
+	//the solution to the first part was basically the inner for loop, so O(n)
+	//but I modified it to find 3 numbers, which ended up making it O(n^2).
+	//there's definately some redundancy that could be smoothed out, espically if i sorted the list beforehand
+	//but atm it isn't *too* bad
+	//(the runtime with the given output is currently 1 millisecond)
 	for outerIdx, outerElem := range numList {
 		firstKey, firstConvIssue := strconv.Atoi(outerElem)
 		if firstConvIssue == nil {
